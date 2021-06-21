@@ -1,0 +1,57 @@
+@import "./var";
+@import "./mixin";
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital@1&family=Architects+Daughter&family=Carter+One&family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+h1{
+  font-family: 'Architects Daughter', cursive; font-size: 3rem;
+}
+
+.main_header {
+  background: rgb(255, 255, 255);
+
+  & .navbar-toggler {
+    border-color: $main-color;
+    border-width: 0;
+    font-size: 1.44rem;
+    border-radius: 1.5;
+    color: $main-color;
+    padding-top: 10px;
+  }
+
+  & .navbar-brand {
+    color: $main-color;
+    font-size: 1.60rem;
+    font-weight: bold;
+    &:hover {
+      color: purple;
+    }
+  }
+
+  & .navbar-nav {
+    & .nav-item {
+      & .nav-link {
+        padding-top: 15px;
+        color: black;
+        text-transform: capitalize;
+        font-weight: 500;
+      }
+    }
+  }
+
+  & #auth-btn {
+    @include common_btn;
+
+    &:hover {
+      @include hoverEffects;
+    }
+  }
+}
